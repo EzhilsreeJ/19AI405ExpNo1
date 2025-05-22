@@ -1,48 +1,91 @@
-<h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: EZHIL SREE J </h3>
+<h1>ExpNo 1 : Developing AI Agent with PEAS Description</h1>
+<h3>Name: EZHIL SREE J</h3>
 <h3>Register Number: 212223230056</h3>
+
+---
 
 <h3>AIM:</h3>
 <p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
+
+---
+
 <h3>Theory</h3>
-<h3>Medicine prescribing agent:</h3>
-<p>Such this agent prescribes medicine for fever (greater than 98.5 degrees) which we consider here as unhealthy, by the user temperature input, and another environment is rooms in the hospital (two rooms). This agent has to consider two factors one is room location and an unhealthy patient in a random room, the agent has to move from one room to another to check and treat the unhealthy person. The performance of the agent is calculated by incrementing performance and each time after treating in one room again it has to check another room so that the movement causes the agent to reduce its performance. Hence, agents prescribe medicine to unhealthy.</p>
-<hr>
+
+<h3>Room-Cleaning Agent:</h3>
+<p>
+An <strong>AI agent</strong> is a system capable of autonomous actions in an environment to achieve a goal. It senses through <strong>sensors</strong> and acts through <strong>actuators</strong>.
+The agent's behavior can be modeled using the <strong>PEAS</strong> framework:
+</p>
+
+<ul>
+  <li><strong>P</strong> – Performance Measure</li>
+  <li><strong>E</strong> – Environment</li>
+  <li><strong>A</strong> – Actuators</li>
+  <li><strong>S</strong> – Sensors</li>
+</ul>
+
+<p>
+In this experiment, we simulate a <strong>room-cleaning agent</strong> (like a vacuum cleaner), operating in <strong>two rooms (A and B)</strong>. The agent must:
+</p>
+
+<ul>
+  <li>Check for dirt in the current room.</li>
+  <li>Clean if dirty.</li>
+  <li>Move to the next room if needed.</li>
+</ul>
+
+<p>
+Each <strong>cleaning</strong> action improves the performance, while each <strong>movement</strong> reduces it.
+</p>
+
+---
+
 <h3>PEAS DESCRIPTION:</h3>
+
 <table>
   <tr>
-    <td><strong>Agent Type</strong></td>
-    <td><strong>Performance</strong></td>
-     <td><strong>Environment</strong></td>
-    <td><strong>Actuators</strong></td>
-    <td><strong>Sensors</strong></td>
+    <th>Agent Type</th>
+    <th>Performance Measure</th>
+    <th>Environment</th>
+    <th>Actuators</th>
+    <th>Sensors</th>
   </tr>
-    <tr>
-    <td><strong>Medicine prescribing agent</strong></td>
-    <td><strong>Treating unhealthy, agent movement</strong></td>
-     <td><strong>Rooms, Patient</strong></td>
-    <td><strong>Medicine, Treatment</strong></td>
-    <td><strong>Location, Temperature of patient</strong></td>
+  <tr>
+    <td>Room-Cleaning Agent</td>
+    <td>Cleanliness, Fewer moves</td>
+    <td>Rooms A and B</td>
+    <td>Move Left/Right, Clean</td>
+    <td>Location Sensor, Dirt Sensor</td>
   </tr>
 </table>
-<hr>
-<H3>DESIGN STEPS</H3>
-<h3>STEP 1:Identifying the input:</h3>
-<p>Temperature from patients, Location.</p>
-<h3>STEP 2:Identifying the output:</h3>
-<p>Prescribe medicine if the patient in a random has a fever.</p>
-<h3>STEP 3:Developing the PEAS description:</h3>
-<p>PEAS description is developed by the performance, environment, actuators, and sensors in an agent.</p>
-<h3>STEP 4:Implementing the AI agent:</h3>
-<p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
-<h3>STEP 5:</h3>
-<p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 
-##  PROGRAM:
-```
-Developing AI Agent with PEAS Description
-Developed by: EZHIL SREE J
-RegisterNumber: 212223230056
+---
+
+<h3>DESIGN STEPS</h3>
+
+<h4>STEP 1: Identifying the input:</h4>
+<p>Location of the agent, Dirt status of the rooms</p>
+
+<h4>STEP 2: Identifying the output:</h4>
+<p>Actions: Move, Clean, Do nothing</p>
+
+<h4>STEP 3: Developing the PEAS description:</h4>
+<p>PEAS description is defined by performance, environment, actuators, and sensors in the AI agent model.</p>
+
+<h4>STEP 4: Implementing the AI agent:</h4>
+<p>Simulate the agent behavior to clean dirty rooms and move as required.</p>
+
+<h4>STEP 5: Measure the performance:</h4>
+<p>Increment for cleaning action, decrement for each movement.</p>
+
+---
+
+<h3>PROGRAM:</h3>
+
+```python
+# Developing AI Agent with PEAS Description
+# Developed by: EZHIL SREE J
+# Register Number: 212223230056
 
 class VacuumCleanerAgent:
     def __init__(self):
@@ -91,14 +134,12 @@ class VacuumCleanerAgent:
 agent = VacuumCleanerAgent()
 
 # Move the agent, suck dirt, and do nothing
-
 agent.perform_action("left")
 agent.print_status()
 agent.perform_action("suck")
 agent.print_status()
 agent.perform_action("nothing")
 agent.print_status()
-```
 
 ## OUTPUT:
 ![Screenshot 2025-05-19 205304](https://github.com/user-attachments/assets/49506727-fdbe-4ef2-8b45-b20b91bf4293)
