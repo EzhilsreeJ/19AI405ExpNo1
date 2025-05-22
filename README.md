@@ -2,12 +2,10 @@
 <h3>Name: EZHIL SREE J</h3>
 <h3>Register Number: 212223230056</h3>
 
----
 
 <h3>AIM:</h3>
 <p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
 
----
 
 <h3>Theory</h3>
 
@@ -59,7 +57,6 @@ Each <strong>cleaning</strong> action improves the performance, while each <stro
   </tr>
 </table>
 
----
 
 <h3>DESIGN STEPS</h3>
 
@@ -78,7 +75,6 @@ Each <strong>cleaning</strong> action improves the performance, while each <stro
 <h4>STEP 5: Measure the performance:</h4>
 <p>Increment for cleaning action, decrement for each movement.</p>
 
----
 
 <h3>PROGRAM:</h3>
 
@@ -140,7 +136,7 @@ agent.perform_action("suck")
 agent.print_status()
 agent.perform_action("nothing")
 agent.print_status()
-
+```
 ## OUTPUT:
 ![Screenshot 2025-05-19 205304](https://github.com/user-attachments/assets/49506727-fdbe-4ef2-8b45-b20b91bf4293)
 
